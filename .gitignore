@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Notebook-generated outputs (reproduced by running Milestone 1.ipynb)
+artifacts/
+submission/artifacts/
+
+# Raw and processed data (downloaded on first run)
+data/
+*.pt
+
+# Model / dataset caches
+.cache/
+hf_cache/
+*.safetensors
+
+# OS files
+.DS_Store
+Thumbs.db
