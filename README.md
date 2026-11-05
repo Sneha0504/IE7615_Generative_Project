@@ -33,13 +33,18 @@ execution summary). These outputs are reproducible and are git-ignored.
 
 ## Dataset
 
-- **Source:** Flickr30k (curated subset).
-- **Size:** 3,000 unique image–caption pairs selected from a ~3,500-image pool
-  (within the required 1k–5k range).
+- **Source:** Flickr30k. The Hugging Face mirror stores the whole corpus
+  (31,783 images) under a single `test` split.
+- **Sampling:** a seeded (seed 42) uniform random sample is drawn across the full
+  31,783-image corpus, then cleaned down to **3,000** image–caption pairs (within
+  the required 1k–5k range).
 - **Preprocessing:** Unicode (NFKC) caption normalization, removal of empty and
   duplicate captions, EXIF-orientation correction, pixel-hash deduplication, and
-  512×512 RGB center crops. One caption per image, seed 42.
-- **Splits:** custom image-disjoint 2400 / 300 / 300 (train / val / test).
+  512×512 RGB center crops. One caption per image.
+- **Splits:** custom image-disjoint 2400 / 300 / 300 (train / val / test). A custom
+  split is used rather than the standard Karpathy split because Karpathy's fixed
+  1,014 / 1,000 validation / test sets are disproportionately large for a 3,000-pair
+  subset.
 
 ## Model
 
