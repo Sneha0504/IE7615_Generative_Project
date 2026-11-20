@@ -25,3 +25,9 @@ hf_cache/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Superseded Milestone 2 (LoRA) variant — kept locally, not tracked
+Milestone_2_new.ipynb
+milestone 2.pdf
+Milestone_2- JupyterLab.pdf
+training_log.csv
